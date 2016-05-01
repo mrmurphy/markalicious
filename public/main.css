@@ -1,3 +1,72 @@
-.foo {
-  background-image: asset-url('background.jpg');
+* {
+  font-family: Lato;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+.page-config label {
+    margin-top: 2em;
+}
+
+.page-config button {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background: #2A6F7F;
+  border-radius: 2px;
+  border: none;
+  font-weight: 300;
+}
+
+.blue { color: #A9EEE6; }
+.cream { color: #FEFAEC; }
+.red { color: #F38181; }
+.purple { color: #625772; }
+
+.flash {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background: #625772;
+  color: white;
+  font-weight: 300;
+  padding: 1em;
+  font-size: 1.5rem;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+  max-width: 100%;
+}
+
+button.show-config {
+  background: transparent;
+  border: 0;
+  font-size: 32px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: .2;
+}
+
+.page-gallery {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.page-gallery.full-height {
+  padding: 0;
+  height: 100vh;
+}
+
+.page-gallery * {
+  font-family: Alegreya;
+  font-size: 3rem;
+  color: hsl(0, 0%, 35%);
+}
+
+.page-gallery h1 {
+  font-weight: 900;
+  color: hsl(0, 0%, 25%);
 }

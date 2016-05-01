@@ -9,6 +9,12 @@
 
         <link rel="stylesheet" href="vendor/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,500" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <style media="screen">
+
+        </style>
     </head>
     <body>
 
@@ -18,7 +24,14 @@
 
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-            Elm.embed(Elm.Main, document.getElementById("main"))
+            var app = Elm.embed(Elm.Main, document.getElementById("main"), {
+              initialHash: window.location.hash
+            })
+
+            app.ports.css.subscribe(function(css) {
+              var styleTag = document.querySelector('head style')
+              styleTag.innerHTML = css
+            })
           })
         </script>
 
